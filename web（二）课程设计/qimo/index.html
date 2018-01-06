@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>小鱼电影</title>
+	<meta charset="UTF-8"/>
+  <style type="text/css">
+    body{padding-bottom: 0px;margin: 0px;width:100%;}
+    body{font:14px "等线";background:#404040;overflow-x:hidden;}
+    h4{margin:0px 0px 0px 175px;color:#f0f0f0;}
+
+    /*logo*/
+    .logo{width:100px;margin:0px 0px 5px 175px;float:left;}
+
+    /*daohanglan*/
+    #dao{height:50px;width:680px;float:left;position: relative;margin:50px 0px 5px 0px;background:#ffa500;}
+    #dao ul{margin:0px;list-style:none;padding:0px;}
+    #dao ul li{height:50px;float:left;width:120px;margin:0px;background:#ffa500;text-align: center;}
+    #dao ul li:hover{height:50px;float:left;width:120px;margin:0px;background:#fff500;text-align: center;}
+    #dao ul li a{text-decoration:none;height:50px;width:120px;color:#202020;text-align:center;font-size:16px;font-family:'等线';position: relative;top:15px;}
+    #dao ul li a:hover{font-size:18px;}
+    #dao ul li ul {margin:0px;width:120px;position:relative;left:0;top:0;}
+    #dao ul li ul li a:hover{font-size:18px;}
+    #dao ul li ul li {height:50px;float:left;width:120px;margin:0px;background:#ffa500;position: relative;top:30px;}
+    #dao ul li ul li:hover{background:#fff500;}
+    #dao li ul{display:none;}
+    #dao li.subMenuShow ul{display:block;}     //JavaScript实现
+
+    /*sousuo*/
+    .clear{clear:both;}
+    .sou {float:left;width:220px;height:50px;background:#ffa500;margin:50px 170px 0px 0px;}
+    .sou input{float:left;height:25px;margin:10px 0px;}
+    .box input{background-color:#f0f0f0;}
+    .box input:focus{background-color:#f8f8f8;}
+    .but{height:25px;float:left;margin:10px 0px;}
+
+    .clear{clear:both;}
+
+    .clear{clear:both;}
+
+    /*huandengpian*/
+    .huan{margin:25px auto;width:1000px;heigth:400px;}
+
+
+    /*biaodan*/
+    .js{width:1000px;margin:0px auto;}
+    .js table p{margin:0;}
+    .js table{margin:25px auto;width:360px;line-height:30px; float:left;border:0px solid #fff; background:#707070;}
+    .js table .t1{width:100px;}
+    .js table .t input{width:120px;background-color:#909090;}
+    .js table .t input:focus{background-color:#f0f0f0;}
+    .js h2{color: #ffa500;}
+    .js td{color:#fff;}
+    .btn{
+      font-size:14px;
+      margin-top:10px;
+      text-align:center;
+      margin-left:30px;
+      width:50px;
+      background-color:#909090;
+      text-align: center;
+    }
+
+    /*yejiao*/
+    .foot{background:url("images/foot.png");width:100%;height:150px;text-align:center;margin:0px;padding:10px 0 0 0;}
+    .foot p{margin:10px auto;color:#fff;margin:15px auto;}
+    .foot a{text-decoration:none;color:#fff;font-weight: bold;}
+    .foot a:hover{color:#ffa500;}
+
+
+
+    .clear{clear:both;}
+    .table{width:450px;margin:10px auto;}
+
+    .dao_shou{color:#f0f0f0;font-size:18px;}
+
+    #body{width:100%;margin:0px auto;}
+
+    .body{width:1000px;height:300px;margin:60px auto;}
+
+    .body h3{text-align:center;margin:5px auto;}
+    .body a{text-decoration:none;color:#f0f0f0;margin:30px auto;}
+    .body a:hover{color:#ffa500;}
+    .body_a{width:184px;float:left;margin:10px 10px 10px 0px;}
+    .body_b{width:184px;float:left;margin:10px;}
+    .body_c{width:184px;float:left;margin:10px 0px 10px 10px;}
+
+    .imga{background:url("images/lei1.png");text-align:right;height:35px;}
+    .imga h3{text-align:right;color:#ffa500;}
+    .imgb{background:url("images/lei2.png");text-align:right;height:35px;}
+    .imgb h3{text-align:right;color:#ffa500;}
+    .imgc{background:url("images/lei3.png");text-align:right;height:35px;}
+    .imgc h3{text-align:right;color:#ffa500;}
+
+  </style>
+
+
+  <script type="text/javascript">
+    //导航栏实现
+    window.onload = function(){
+      var liNodes = document.getElementsByTagName("li");
+      for (var i=0; i<liNodes.length; i++)
+      {
+        liNodes[i].onmouseover = function(){
+          this.className = "subMenuShow";
+        }
+        liNodes[i].onmouseout = function(){
+          this.className = "";
+        }
+      }
+    }
+  </script>
+
+</head>
+
+<body>
+  <div id="body">
+<!--logo-->
+<div class="logo"><img src="images/logo.png" height="100px"></div>
+
+<!--导航栏-->
+<div id="dao">
+	<ul>
+		<li><a href="#">电影首页</a>
+      <ul>
+        <li><a href="#">简介</a></li>
+        <li><a href="#">院线热映</a></li>
+        <li><a href="#">付费电影</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#">电视剧</a>
+      <ul>
+        <li><a href="#">柒个我</a></li>
+        <li><a href="#">我的体育老师</a></li>
+        <li><a href="#">声名狼藉</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#">最新电影</a>
+      <ul>
+        <li><a href="#">心理罪</a></li>
+        <li><a href="#">寻梦环游记</a></li>
+        <li><a href="#">前任3</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#">经典电影</a>
+      <ul>
+        <li><a href="#">霸王别姬</a></li>
+        <li><a href="#">大话西游</a></li>
+        <li><a href="#">月光宝盒</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#">动画电影</a>
+      <ul>
+        <li><a href="#">神偷奶爸3</a></li>
+        <li><a href="#">神犬小巴迪</a></li>
+        <li><a href="#">太空巴迪</a></li>
+      </ul>
+    </li>
+
+	</ul>
+</div>
+
+<!--搜索-->
+<div class="sou">
+	<div class="box"><input type="text"/></div>
+	<div class="but"><a href="#"><img src="images/sou.png" height="30px"></a></div>	
+</div>
+</div>
+
+<!--banner
+<div class="banner"><img src="images/banner2.png" width="1365px"></div>-->
+
+<div class="clear"></div>
+  <div class="huan">
+    <img src="images/0.jpg" id="myPicture" width="1000px" height="400px" alt="Slideshow" onmouseout="auto()" onmouseover="pause()" />
+  </div>
+
+<div class="clear"></div>
+<!--页面主体-->
+<div class="js">
+  <div>
+    <table border="">
+      <form>
+        <tr><td colspan="2" align="center"><h2>注册/登录</h2></td></tr>
+        <tr><td class="t1">用户名：</td><td class="t"><input type="text" name="user"/></td></tr>
+        <tr><td class="t1">密码：</td><td class="t"><input type="password" name="user"/></td></tr>
+        <tr><td class="t1">确认密码：</td><td class="t"><input type="password" name="user"/></td></tr>
+        <tr><td class="t1">手机号：</td><td class="t"><input type="text" name="user"/></td></tr>
+        <tr><td class="t1">邮箱：</td><td class="t"><input type="text" name="user"/></td></tr>
+        <tr><td colspan="2" align="center"><input type="submit" value="提交"  class="btn">&nbsp;&nbsp;<input type="reset" value="重置" class="btn"/></td></tr>
+      </form>
+    </table>
+  </div>
+</div>
+<div class="clear"></div>
+<div class="body">
+    <div class="imga"><a href="list.html"><h3>&gt;&gt;&gt;更多</h3></a></div>
+    <div class="body_a"><a href="content.html"><img src="images/bianxingjingang.png" width="184px" height="250px"><h3>变形金刚5</h3></a></div>
+    <div class="body_b"><a href="content.html"><img src="images/yixing.png" width="184px" height="250px"><h3>异形·契约</h3></a></div>
+    <div class="body_b"><a href="content.html"><img src="images/buqieryu.png" width="184px" height="250px"><h3>不期而遇</h3></a></div>
+    <div class="body_b"><a href="content.html"><img src="images/xianyiren.png" width="184px" height="250px"><h3>嫌疑人X的陷身</h3></a></div>
+    <div class="body_c"><a href="content.html"><img src="images/shenqinvxia.png" width="184px" height="250px"><h3>神奇女侠</h3></a></div>
+</div>
+
+
+<div class="body">
+    <div class="imgb"><a href="list.html"><h3>&gt;&gt;&gt;更多</h3></a></div>
+    <div class="body_a"><a href="content.html"><img src="images/jialebi.png" width="184px" height="250px"><h3>加勒比海盗</h3></a></div>
+    <div class="body_b"><a href="content.html"><img src="images/meiguoduizhang.png" width="184px" height="250px"><h3>美国队长2</h3></a></div>
+    <div class="body_b"><a href="content.html"><img src="images/lie19.png" width="184px" height="250px"><h3>暮光之城</h3></a></div>
+    <div class="body_b"><a href="content.html"><img src="images/lie18.png" width="184px" height="250px"><h3>夏有乔木雅望天堂</h3></a></div>
+    <div class="body_c"><a href="content.html"><img src="images/lie20.png" width="184px" height="250px"><h3>七月与安生</h3></a></div>
+</div>
+
+
+<div class="body">
+    <div class="imgc"><a href="list.html"><h3>&gt;&gt;&gt;更多</h3></a></div>
+    <div class="body_a"><a href="content.html"><img src="images/huiguniang.png" width="184px" height="250px"><h3>灰姑娘</h3></a></div>
+    <div class="body_b"><a href="content.html"><img src="images/lubingsun.png" width="184px" height="250px"><h3>鲁滨孙漂流记</h3></a></div>
+    <div class="body_b"><a href="content.html"><img src="images/lie15.png" width="184px" height="250px"><h3>大鱼海棠</h3></a></div>
+    <div class="body_b"><a href="content.html"><img src="images/lie11.png" width="184px" height="250px"><h3>冰雪奇缘</h3></a></div>
+    <div class="body_c"><a href="content.html"><img src="images/qianyuqianxun.png" width="184px" height="250px"><h3>千与千寻</h3></a></div>
+</div>
+
+<!--页脚-->
+<div class="foot">
+  <p>
+  <a href="#">电子邮箱</a>&nbsp;|&nbsp;
+  <a href="#">设为首页</a>&nbsp;|&nbsp;
+  <a href="#">在线调查</a>&nbsp;|&nbsp;
+  <a href="#">加入收藏</a>&nbsp;|&nbsp;
+  <a href="#">网站地图</a>&nbsp;|&nbsp;
+  <a href="#">关于我们</a>
+  </p>
+  <p><img src="images/line.png" height=""></p>
+  <p>Copyright ©2017  suncaixuan.com, All  Rights Reserved</p>
+  <p>冀ICP备05067795号  冀公网安备110402440008号</p>
+</div>
+
+
+<script>
+  var picArr = new Array("images/1.jpg", "images/2.jpg", "images/3.jpg", "images/4.jpg", "images/5.jpg", "images/6.jpg", "images/7.jpg", "images/8.jpg", "images/9.jpg", "images/10.jpg", "images/11.jpg", "images/12.jpg", "images/0.jpg");
+  var index = 0;
+  function next() { //下一张图片  
+                index++;  
+                if(index == picArr.length) {  
+                    index = 0;  
+                }  
+                document.getElementById("myPicture").src = picArr[index]; //修改src值  
+            }
+  function auto(){
+    int = window.setInterval("next()",2000);
+  }
+  function pause(){  //暂停自动播放
+    int = window.clearInterval(int);
+  } 
+</script>
+
+
+<script>
+    //表单验证
+    var user=document.getElementsByTagName('input')[1];//用户名
+    //user.focus();//获得焦点
+    //失去焦点
+    user.onblur=function(){
+      if(user.value.length==0){
+        var spans=document.getElementsByTagName('span');
+        if(spans.length!=0){
+            spans[0].parentNode.removeChild(spans[0]);
+        }
+        var newspan=document.createElement('span');
+        newspan.innerHTML="用户名不能为空";
+        user.parentNode.appendChild(newspan);
+      }
+      else{
+        var spans=document.getElementsByTagName('span');
+        if(spans.length!=0){
+          spans[0].parentNode.removeChild(spans[0]);
+        }
+        var newspan=document.createElement('span');
+        newspan.innerHTML="用户名可用";
+        user.parentNode.appendChild(newspan);
+      }
+    }
+    var word=document.getElementsByTagName('input')[2];//密码
+    word.onblur=function(){
+      if(word.value.length==0){
+        var spans=document.getElementsByTagName('span');
+        if(spans.length>=2){
+          if(spans[1].length!=0)
+          spans[1].parentNode.removeChild(spans[1]);
+        }
+        var newspan=document.createElement('span');
+        newspan.innerHTML="密码不能为空";
+        word.parentNode.appendChild(newspan);
+      }
+      else{
+        var spans=document.getElementsByTagName('span');
+        if(spans.length>=2){
+          if(spans[1].length!=0)
+          spans[1].parentNode.removeChild(spans[1]);
+        }
+        var newspan=document.createElement('span');
+        newspan.innerHTML="密码可用";
+        word.parentNode.appendChild(newspan);
+      }
+    }
+    var pword=document.getElementsByTagName('input')[3];//确认密码
+    pword.onblur=function(){
+      if(pword.value.length==0){
+        var spans=document.getElementsByTagName('span');
+        if(spans.length>=3){
+          if(spans[2].length!=0)
+          spans[2].parentNode.removeChild(spans[2]);
+        }
+        var newspan=document.createElement('span');
+        newspan.innerHTML="密码不能为空";
+        pword.parentNode.appendChild(newspan);
+      }
+      else{
+        if(pword.value==word.value){
+          var spans=document.getElementsByTagName('span');
+          if(spans.length>=3){
+            if(spans[2].length!=0)
+            spans[2].parentNode.removeChild(spans[2]);
+          }
+          var newspan=document.createElement('span');
+          newspan.innerHTML="密码一致";
+          pword.parentNode.appendChild(newspan);
+        }
+        else{
+          var spans=document.getElementsByTagName('span');
+          if(spans.length==3){
+            if(spans[2].length!=0)
+            spans[2].parentNode.removeChild(spans[2]);
+          }
+          var newspan=document.createElement('span');
+          newspan.innerHTML="密码不一致";
+          pword.parentNode.appendChild(newspan);
+        }
+      }
+    }
+    var textbook=document.getElementsByTagName('input')[4];//电话号码
+    textbook.onblur=function(){
+      if(textbook.value.length==0){
+        var spans=document.getElementsByTagName('span');
+        if(spans.length>=4){
+          if(spans[3].length!=0)
+          spans[3].parentNode.removeChild(spans[3]);
+        }
+        var newspan=document.createElement('span');
+        newspan.innerHTML="电话号码不能为空";
+        textbook.parentNode.appendChild(newspan);
+      }
+      else{
+        var reg = /^1[3|4|5|7|8]\d{9}$/;
+        if(textbook.value.length!=11){
+          var spans=document.getElementsByTagName('span');
+          if(spans.length>=4){
+            if(spans[3].length!=0)
+            spans[3].parentNode.removeChild(spans[3]);
+          }
+          var newspan=document.createElement('span');
+          newspan.innerHTML="电话号码长度不正确";
+          textbook.parentNode.appendChild(newspan);
+        }
+        else{
+          if(reg.test(textbook.value)){
+            var spans=document.getElementsByTagName('span');
+            if(spans.length>=4){
+              if(spans[3].length!=0)
+              spans[3].parentNode.removeChild(spans[3]);
+            }
+          var newspan=document.createElement('span');
+          newspan.innerHTML="电话号码正确";
+          textbook.parentNode.appendChild(newspan);
+          }
+          else{
+            var spans=document.getElementsByTagName('span');
+            if(spans.length>=4){
+              if(spans[3].length!=0)
+              spans[3].parentNode.removeChild(spans[3]);
+            }
+          var newspan=document.createElement('span');
+          newspan.innerHTML="请输入电话正确的号码";
+          textbook.parentNode.appendChild(newspan);
+          
+          }
+        }
+      }
+    }
+    var emails=document.getElementsByTagName('input')[5];//邮箱
+    emails.onblur=function(){
+      if(emails.value.length==0){
+        var spans=document.getElementsByTagName('span');
+        if(spans.length>=5){
+          if(spans[4].length!=0)
+          spans[4].parentNode.removeChild(spans[4]);
+        }
+        var newspan=document.createElement('span');
+        newspan.innerHTML="邮箱不能为空";
+        emails.parentNode.appendChild(newspan);
+      }
+      else{
+        if (emails.value.search(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/) != -1){
+          var spans=document.getElementsByTagName('span');
+          if(spans.length>=5){
+            if(spans[4].length!=0)
+            spans[4].parentNode.removeChild(spans[4]);
+          }
+          var newspan=document.createElement('span');
+          newspan.innerHTML="邮箱正确";
+          emails.parentNode.appendChild(newspan);
+        }
+        else{
+          var spans=document.getElementsByTagName('span');
+          if(spans.length>=5){
+            if(spans[4].length!=0)
+            spans[4].parentNode.removeChild(spans[4]);
+          }
+          var newspan=document.createElement('span');
+          newspan.innerHTML="邮箱不正确";
+          emails.parentNode.appendChild(newspan);
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
